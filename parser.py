@@ -3,7 +3,7 @@ import telebot
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
-bot = telebot.TeleBot('5065626928:AAE8UvP78pmudoVhgHKNbaR0gy3VT7EwOfE')
+bot = telebot.TeleBot('yourbotfatherkey')
 
 def main():
     driver = webdriver.Chrome(ChromeDriverManager().install())
