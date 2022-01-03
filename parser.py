@@ -98,32 +98,20 @@ def main():
     Coin10Volume = driver.find_element_by_css_selector('#fullColumn > div:nth-child(9) > table > tbody > tr:nth-child(10) > td.js-total-vol')
     Coin10Changes24h = driver.find_element_by_xpath('//*[@id="fullColumn"]/div[6]/table/tbody/tr[10]/td[8]')
     Coin10Changes7d = driver.find_element_by_xpath('//*[@id="fullColumn"]/div[6]/table/tbody/tr[10]/td[9]')
-
-    global allCoin
-    allCoin = [Coin1Prise.text, Coin2Prise.text, Coin3Prise.text, Coin4Prise.text, Coin5Prise.text, Coin6Prise.text, Coin7Prise.text, Coin8Prise.text, Coin9Prise.text, Coin10Prise.text]
-
-
-
-while allCoin:
-    if allCoin != 0:
-        bot.send_message(chat_id='1653692753', text=f'123123asdasd')
-    elif allCoin == 0:
-        break
             
-            
-# with open('info.csv', 'w', newline='') as csvfile:
-#     fileWriter = csv.writer(csvfile, delimiter=';', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-#     fileWriter.writerow(['Name', 'Ticker', 'Prise', 'MarketCap', 'Volume', 'Volume(24h)', 'Changes(24)', 'Changes(7d)'])
-#     fileWriter.writerow([Coin1Name.text, Coin1Ticker.text, Coin1Prise.text, Coin1MarketCap.text, Coin1Volume24h.text, Coin1Volume.text, Coin1Changes24h.text, Coin1Changes7d.text])
-#     fileWriter.writerow([Coin2Name.text, Coin2Ticker.text, Coin2Prise.text, Coin2MarketCap.text, Coin2Volume24h.text, Coin2Volume.text, Coin2Changes24h.text, Coin2Changes7d.text])
-#     fileWriter.writerow([Coin3Name.text, Coin3Ticker.text, Coin3Prise.text, Coin3MarketCap.text, Coin3Volume24h.text, Coin3Volume.text, Coin3Changes24h.text, Coin3Changes7d.text])
-#     fileWriter.writerow([Coin4Name.text, Coin4Ticker.text, Coin4Prise.text, Coin4MarketCap.text, Coin4Volume24h.text, Coin4Volume.text, Coin4Changes24h.text, Coin4Changes7d.text])
-#     fileWriter.writerow([Coin5Name.text, Coin5Ticker.text, Coin5Prise.text, Coin5MarketCap.text, Coin5Volume24h.text, Coin5Volume.text, Coin5Changes24h.text, Coin5Changes7d.text])
-#     fileWriter.writerow([Coin6Name.text, Coin6Ticker.text, Coin6Prise.text, Coin6MarketCap.text, Coin6Volume24h.text, Coin6Volume.text, Coin6Changes24h.text, Coin6Changes7d.text])
-#     fileWriter.writerow([Coin7Name.text, Coin7Ticker.text, Coin7Prise.text, Coin7MarketCap.text, Coin7Volume24h.text, Coin7Volume.text, Coin7Changes24h.text, Coin7Changes7d.text])
-#     fileWriter.writerow([Coin8Name.text, Coin8Ticker.text, Coin8Prise.text, Coin8MarketCap.text, Coin8Volume24h.text, Coin8Volume.text, Coin8Changes24h.text, Coin8Changes7d.text])
-#     fileWriter.writerow([Coin9Name.text, Coin9Ticker.text, Coin9Prise.text, Coin9MarketCap.text, Coin9Volume24h.text, Coin9Volume.text, Coin9Changes24h.text, Coin9Changes7d.text])
-#     fileWriter.writerow([Coin10Name.text, Coin10Ticker.text, Coin10Prise.text, Coin10MarketCap.text, Coin10Volume24h.text, Coin10Volume.text, Coin10Changes24h.text, Coin10Changes7d.text])
+    with open('info.csv', 'w', newline='') as csvfile:
+        fileWriter = csv.writer(csvfile, delimiter=';', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        fileWriter.writerow(['Name', 'Ticker', 'Prise', 'MarketCap', 'Volume', 'Volume(24h)', 'Changes(24)', 'Changes(7d)'])
+        fileWriter.writerow([Coin1Name.text, Coin1Ticker.text, Coin1Prise.text, Coin1MarketCap.text, Coin1Volume24h.text, Coin1Volume.text, Coin1Changes24h.text, Coin1Changes7d.text])
+        fileWriter.writerow([Coin2Name.text, Coin2Ticker.text, Coin2Prise.text, Coin2MarketCap.text, Coin2Volume24h.text, Coin2Volume.text, Coin2Changes24h.text, Coin2Changes7d.text])
+        fileWriter.writerow([Coin3Name.text, Coin3Ticker.text, Coin3Prise.text, Coin3MarketCap.text, Coin3Volume24h.text, Coin3Volume.text, Coin3Changes24h.text, Coin3Changes7d.text])
+        fileWriter.writerow([Coin4Name.text, Coin4Ticker.text, Coin4Prise.text, Coin4MarketCap.text, Coin4Volume24h.text, Coin4Volume.text, Coin4Changes24h.text, Coin4Changes7d.text])
+        fileWriter.writerow([Coin5Name.text, Coin5Ticker.text, Coin5Prise.text, Coin5MarketCap.text, Coin5Volume24h.text, Coin5Volume.text, Coin5Changes24h.text, Coin5Changes7d.text])
+        fileWriter.writerow([Coin6Name.text, Coin6Ticker.text, Coin6Prise.text, Coin6MarketCap.text, Coin6Volume24h.text, Coin6Volume.text, Coin6Changes24h.text, Coin6Changes7d.text])
+        fileWriter.writerow([Coin7Name.text, Coin7Ticker.text, Coin7Prise.text, Coin7MarketCap.text, Coin7Volume24h.text, Coin7Volume.text, Coin7Changes24h.text, Coin7Changes7d.text])
+        fileWriter.writerow([Coin8Name.text, Coin8Ticker.text, Coin8Prise.text, Coin8MarketCap.text, Coin8Volume24h.text, Coin8Volume.text, Coin8Changes24h.text, Coin8Changes7d.text])
+        fileWriter.writerow([Coin9Name.text, Coin9Ticker.text, Coin9Prise.text, Coin9MarketCap.text, Coin9Volume24h.text, Coin9Volume.text, Coin9Changes24h.text, Coin9Changes7d.text])
+        fileWriter.writerow([Coin10Name.text, Coin10Ticker.text, Coin10Prise.text, Coin10MarketCap.text, Coin10Volume24h.text, Coin10Volume.text, Coin10Changes24h.text, Coin10Changes7d.text])
 
 if __name__ == '__main__':
     main()
